@@ -1,0 +1,65 @@
+Hooks:- Hooks are the functions that to use some react features in functional components.
+or hooks are functions that make functional components work like class component.
+
+React Hooks are functions that enable functional components to use React state and lifecycle features. 
+They eliminate the need for class components, making code cleaner and easier to maintain
+
+
+useState Hooks:-
+
+import "./styles.css";
+import { useState } from "react";
+export default function App() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    number: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleClick = () => {
+    console.log(form);
+  };
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <input
+        type="text"
+        name="name"
+        value={form.name}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="email"
+        value={form.email}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="number"
+        value={form.number}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="password"
+        value={form.password}
+        onChange={handleChange}
+      />
+
+      <button onClick={handleClick}>Click</button>
+    </div>
+  );
+}
+
+useState is used to manage and update the variables which are used in the functional components.
+we can also pass a function inside the useState hooks
