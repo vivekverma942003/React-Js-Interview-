@@ -62,4 +62,6 @@ export default function App() {
 }
 
 useState is used to manage and update the variables which are used in the functional components.
-we can also pass a function inside the useState hooks
+we can also pass a function inside the useState hooks.
+
+
